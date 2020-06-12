@@ -1,7 +1,5 @@
 /*
-function toggleSidebar(){
-    document.getElementById("sidebar").classList.toggle("active");
-}
+Two functions below make the window in the homepage be hidden before I click open
 */
 
 function openNav() {

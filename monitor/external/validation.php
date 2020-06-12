@@ -46,7 +46,7 @@ if(isset($_POST['rem_tag']))
     $result = $conn->query("SELECT tagid FROM validtags WHERE tagid = $tagid");
     if ($result->num_rows==0) {
 	shell_exec('sudo /home/pi/Desktop/pi-rfid4/cleanps.sh');
-	echo "NOT IN DATABASE";
+	echo "Not in database";
 	}
 	
     else{
@@ -77,8 +77,6 @@ if(isset($_POST['stop-bg']))
     shell_exec('/home/pi/Desktop/pi-rfid4/cleanps.sh');
     shell_exec('sudo python3 /home/pi/Desktop/pi-rfid4/cleanup.py ');
     //shell_exec('sudo python3 /home/pi/Desktop/pi-rfid4/test6.py &');
-    $facts = shell_exec('cd~; pwd ; whoami ');
-    echo $facts;
     echo "Start over";
 }
 
